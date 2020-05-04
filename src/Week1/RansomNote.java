@@ -13,6 +13,16 @@ Each letter in the magazine string can only be used once in your ransom note.
 
 class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
+    	
+    	if(ransomNote.length() > magazine.length())
+    	{
+    		return false;
+    	}
+    	
+    	if(ransomNote.equals(magazine))
+    	{
+    		return true;
+    	}
         
         Map<Character,Integer> map = new HashMap<>();
         boolean res = true;
